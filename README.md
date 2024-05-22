@@ -22,52 +22,52 @@ import {
   checkAndRequestPermissions,
   getReceivedMessages,
 } from 'react-native-awesome-sms';
-// ...
 ```
 
 ## For Checking READ_SMS Permission and SMS History
 
+```js
 useEffect(() => {
-const requestSmsPermission = async () => {
-try {
-const granted = await PermissionsAndroid.request(
-PermissionsAndroid.PERMISSIONS.READ_SMS
-);
-setPermissionsAndroidcheck(granted);
-if (granted !== PermissionsAndroid.RESULTS.GRANTED) {
-checkAndRequestPermissions();
-} else {
-
-          getReceivedMessages().then(setResult);
-        }
-      } catch (err) {
-        console.warn(err);
+  const requestSmsPermission = async () => {
+    try {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.READ_SMS
+      );
+      setPermissionsAndroidcheck(granted);
+      if (granted !== PermissionsAndroid.RESULTS.GRANTED) {
+        checkAndRequestPermissions();
+      } else {
+        getReceivedMessages().then(setResult);
       }
-    };
-
-})
+    } catch (err) {
+      console.warn(err);
+    }
+  };
+});
+```
 
 ## For INComing SMS
 
+```js
 React.useEffect(() => {
-if (PermissionsAndroidcheck === PermissionsAndroid.RESULTS.GRANTED) {
-let subscriber = DeviceEventEmitter.addListener(
-'onSMSReceived',
-(message) => {
-const { messageBody, senderPhoneNumber } = message;
-Alert.alert(
-'SMS received',
-`Message Body: ${messageBody} & sender number: ${senderPhoneNumber}`
-);
-}
-);
+  if (PermissionsAndroidcheck === PermissionsAndroid.RESULTS.GRANTED) {
+    let subscriber = DeviceEventEmitter.addListener(
+      'onSMSReceived',
+      (message) => {
+        const { messageBody, senderPhoneNumber } = message;
+        Alert.alert(
+          'SMS received',
+          `Message Body: ${messageBody} & sender number: ${senderPhoneNumber}`
+        );
+      }
+    );
 
-      return () => {
-        subscriber.remove();
-      };
-    }
-
+    return () => {
+      subscriber.remove();
+    };
+  }
 }, [PermissionsAndroidcheck]);
+```
 
 ## Contributing
 
