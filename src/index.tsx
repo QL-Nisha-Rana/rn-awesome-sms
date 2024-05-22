@@ -9,14 +9,17 @@ const LINKING_ERROR =
 const AwesomeSms = NativeModules.AwesomeSms
   ? NativeModules.AwesomeSms
   : new Proxy(
-      {},
-      {
-        get() {
-          throw new Error(LINKING_ERROR);
-        },
-      }
-    );
+    {},
+    {
+      get() {
+        throw new Error(LINKING_ERROR);
+      },
+    }
+  );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return AwesomeSms.multiply(a, b);
+export function getReceivedMessages() {
+  return AwesomeSms.getReceivedMessages();
+}
+export function checkAndRequestPermissions() {
+  return AwesomeSms.checkAndRequestPermissions();
 }
