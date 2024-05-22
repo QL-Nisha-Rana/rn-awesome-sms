@@ -6,8 +6,10 @@ react-native-awesom-sms is a React Native package that allows your application t
 
 This package requires the following permissions to be added to your `AndroidManifest.xml`
 
+```xml
 <uses-permission android:name="android.permission.READ_SMS"/>
 <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+```
 
 ## Installation
 
