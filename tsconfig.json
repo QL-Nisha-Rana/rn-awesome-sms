@@ -2,7 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "react-native-awesome-sms": ["./src/index"]
+      "rn-awesome-sms": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

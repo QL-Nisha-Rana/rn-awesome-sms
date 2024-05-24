@@ -1,7 +1,7 @@
 {
-  "name": "react-native-awesome-sms",
+  "name": "rn-awesome-sms",
   "version": "0.1.0",
-  "description": "react-native-awesom-sms is a React Native package that allows your application to receive new SMS messages and retrieve SMS history on Android devices. This module provides seamless integration with the native Android SMS functionalities, enabling efficient message handling directly within your React Native app",
+  "description": "react-native-awesom-sms is a comprehensive React Native package designed to enhance your application's SMS handling capabilities on Android devices. This module allows your app to seamlessly receive new SMS messages, retrieve SMS history, and manage sent, received, and all SMS messages efficiently. With native integration into Android's SMS functionalities, react-native-awesom-sms provides robust and reliable SMS management directly within your React Native app.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
@@ -26,7 +26,7 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace react-native-awesome-sms-example",
+    "example": "yarn workspace rn-awesome-sms-example",
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
@@ -41,14 +41,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/QL-Saurabh-Upadhyay/react-native-awesome-sms.git"
+    "url": "git+https://github.com/QL-Nisha-Rana/rn-awesome-sms"
   },
   "author": "saurabh upadhyay <saurabh.upadhyay@quokkalabs.com> (https://github.com/QL-Saurabh-Upadhyay)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/QL-Saurabh-Upadhyay/react-native-awesome-sms/issues"
+    "url": "https://github.com/QL-Nisha-Rana/rn-awesome-sms/issues"
   },
-  "homepage": "https://github.com/QL-Saurabh-Upadhyay/react-native-awesome-sms#readme",
+  "homepage": "https://github.com/QL-Nisha-Rana/rn-awesome-sms#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
